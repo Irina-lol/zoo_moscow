@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f44bf42-0cf0-467a-a30d-5a91f88d0d5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/animals.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/questions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/feedback.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/quiz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/scoring.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/лев.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/сурикат.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/тамаран.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/quiz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/images.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,8 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Python.bot.executor": "Run",
+    "Python.images.executor": "Run",
+    "Python.quiz.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"

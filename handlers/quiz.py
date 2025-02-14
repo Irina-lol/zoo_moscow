@@ -1,7 +1,9 @@
-# handlers/quiz.py
 import json
+import logging
 from telegram import Update
 from telegram.ext import CallbackContext
+from utils.images import get_animal_image
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 async def start_quiz(update: Update, context: CallbackContext):
@@ -59,3 +61,23 @@ async def finish_quiz(update: Update, context: CallbackContext):
 
     result = max(scores, key=scores.get)
     await update.message.reply_text(f"Твоё животное — {result}!")
+
+    try:
+        # Отправка изображения
+        image = get_animal_image(result)
+        await update.message.reply_photo(photo=image)
+    except FileNotFoundError as e:
+        logging.error(f"Ошибка при отправке изображения: {e}")
+        await update.message.reply_text("Извините, изображение не найдено.")
+    except Exception as e:
+        logging.error(f"Неизвестная ошибка: {e}")
+        await update.message.reply_text("Что-то пошло не так. Попробуйте позже.")
+
+    # Кнопка для публикации результата
+    keyboard = [
+        [InlineKeyboardButton("Поделиться результатом", url=f"https://t.me/share/url?url=Моё животное — {result}!")],
+        [InlineKeyboardButton("Попробовать ещё раз", callback_data="restart_quiz")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text("Поделись результатом с друзьями или попробуй ещё раз!", reply_markup=reply_markup)
+
